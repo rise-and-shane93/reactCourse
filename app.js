@@ -1,44 +1,97 @@
-function Header() {
+const players = [
+    {
+        name: "Guil",
+        score: 50,
+        id: 1
+    },
+    {
+        name: "Treasure",
+        score: 85,
+        id: 2
+    },
+    {
+        name: "Ashley",
+        score: 95,
+        id: 3
+    },
+    {
+        name: "James",
+        score: 80,
+        id: 4
+    }
+];
+
+const Header = (props) => {
     return (
         <header>
-            <h1>Scoreboard</h1>
-            <span className="stats">Players: 1</span>
+            <h1>{ props.title }</h1>
+            <span className="stats">Players: { props.totalPlayers }</span>
         </header>
     );
 }
 
-const Player = () => {
+const Player = (props) => {
     return (
         <div className="player">
             <span className="player-name">
-                Guil
+                { props.name }
             </span>
             <Counter />
         </div>//</player>
     );
 }
 
-const Counter = () => {
-    return (
-        <div className="counter">
-            <button className="counter-action decrement"> - </button>
-            <span className="counter-score">35</span>
-            <button className="counter-action increment"> + </button>
-        </div>
-    );
+class Counter extends React.Component {
+
+    state = {
+        score: 0
+    };
+
+    incrementScore = () => {
+        //console.log('Hi, from inside incrementScore!');
+        this.setState( prevState => ({
+                score: prevState.score + 1
+        }));
+    }
+
+    decrementScore = () => {
+        //console.log('Hi, from inside incrementScore!');
+        this.setState( prevState => ({
+                score: prevState.score - 1
+        }));
+    }
+
+    render() {
+        return (
+            <div className="counter">
+                <button className="counter-action decrement" onClick={this.decrementScore}> - </button>
+                <span className="counter-score">{ this.state.score }</span>
+                <button className="counter-action increment" onClick={this.incrementScore}> + </button>
+            </div>
+        );
+    }
 }
 
-const App = () => {
+const App = (props) => {
     return (
         <div className="scoreboard">
-            <Header title="Scoreboard" totalPlayers={1} />
+            <Header 
+                title="Scoreboard" 
+                totalPlayers={props.initialPlayers.length} 
+            />
             {/* Players list */}
-            <Player />
+            {props.initialPlayers.map( player =>
+                <Player 
+                    name={player.name}
+                    key={player.id.toString()}
+                />
+            )}
+            
         </div>
     );
 }
 
 ReactDOM.render(
-    <App />,
+    <App initialPlayers={players} />,
     document.getElementById('root')
 );
