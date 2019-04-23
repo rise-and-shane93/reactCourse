@@ -35,6 +35,15 @@ class App extends Component {
   //player id counter
   prevPlayerId = 4;
 
+  getHighScore = () => {
+      const scores = this.state.players.map( p => p.score );
+      const highScore = Math.max(...scores);
+      if (highScore) {
+          return highScore;
+      }
+      return null;
+  }
+
   handleScoreChange = (index, delta) => {
         this.setState( prevState => ({
             score: prevState.players[index].score += delta
@@ -61,15 +70,18 @@ class App extends Component {
       this.setState( prevState => {
           return {
               players: prevState.players.filter(p => p.id !== id)
+              //When this function is invoked, we iterate through the player's array and state
+              //and filter out only the player object whose id does not equal the id passed into handleRemovePlayer
           };
       })
   }
 
   render() {
+    const highScore = this.getHighScore();
+
       return (
           <div className="scoreboard">
               <Header 
-                  title="Scoreboard" 
                   players={this.state.players}
               />
               {/* Players list */}
@@ -82,6 +94,7 @@ class App extends Component {
                       index={index}
                       changeScore={this.handleScoreChange}
                       removePlayer={this.handleRemovePlayer}
+                      isHighScore={highScore === player.score} // is a plyer's 'score' prop equal to the high score?
                   />
               )}
               
