@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/rise-and-shane93/reactCourse/precache-manifest.1fed057dfee38970f05de8b1603f39fe.js"
+  "/reactCourse/precache-manifest.f3f5d6ebda0d53f02379fc9ab05cbc83.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/rise-and-shane93/reactCourse/index.html", {
+workbox.routing.registerNavigationRoute("/reactCourse/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

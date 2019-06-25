@@ -1,13 +1,13 @@
 {
-  "main.css": "/rise-and-shane93/reactCourse/static/css/main.6252abc2.chunk.css",
-  "main.js": "/rise-and-shane93/reactCourse/static/js/main.27d6db5e.chunk.js",
-  "main.js.map": "/rise-and-shane93/reactCourse/static/js/main.27d6db5e.chunk.js.map",
-  "runtime~main.js": "/rise-and-shane93/reactCourse/static/js/runtime~main.45a6194f.js",
-  "runtime~main.js.map": "/rise-and-shane93/reactCourse/static/js/runtime~main.45a6194f.js.map",
-  "static/js/2.b9a4e56d.chunk.js": "/rise-and-shane93/reactCourse/static/js/2.b9a4e56d.chunk.js",
-  "static/js/2.b9a4e56d.chunk.js.map": "/rise-and-shane93/reactCourse/static/js/2.b9a4e56d.chunk.js.map",
-  "index.html": "/rise-and-shane93/reactCourse/index.html",
-  "precache-manifest.1fed057dfee38970f05de8b1603f39fe.js": "/rise-and-shane93/reactCourse/precache-manifest.1fed057dfee38970f05de8b1603f39fe.js",
-  "service-worker.js": "/rise-and-shane93/reactCourse/service-worker.js",
-  "static/css/main.6252abc2.chunk.css.map": "/rise-and-shane93/reactCourse/static/css/main.6252abc2.chunk.css.map"
+  "main.css": "/reactCourse/static/css/main.6252abc2.chunk.css",
+  "main.js": "/reactCourse/static/js/main.8927a691.chunk.js",
+  "main.js.map": "/reactCourse/static/js/main.8927a691.chunk.js.map",
+  "runtime~main.js": "/reactCourse/static/js/runtime~main.d945fb4d.js",
+  "runtime~main.js.map": "/reactCourse/static/js/runtime~main.d945fb4d.js.map",
+  "static/js/2.b9a4e56d.chunk.js": "/reactCourse/static/js/2.b9a4e56d.chunk.js",
+  "static/js/2.b9a4e56d.chunk.js.map": "/reactCourse/static/js/2.b9a4e56d.chunk.js.map",
+  "index.html": "/reactCourse/index.html",
+  "precache-manifest.f3f5d6ebda0d53f02379fc9ab05cbc83.js": "/reactCourse/precache-manifest.f3f5d6ebda0d53f02379fc9ab05cbc83.js",
+  "service-worker.js": "/reactCourse/service-worker.js",
+  "static/css/main.6252abc2.chunk.css.map": "/reactCourse/static/css/main.6252abc2.chunk.css.map"
 }
